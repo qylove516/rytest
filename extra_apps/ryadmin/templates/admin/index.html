@@ -1,0 +1,73 @@
+{% extends 'admin/base.html' %}
+{% block content %}
+    <body>
+        <!-- 顶部开始 -->
+        <div class="container">
+            <div class="logo"><a href="#">{{ site_header }}</a></div>
+            <div class="left_open">
+                <i title="展开左侧栏" class="iconfont">&#xe699;</i>
+            </div>
+            <ul class="layui-nav left fast-add" lay-filter="">
+              <li class="layui-nav-item">
+                <a href="javascript:;">最新消息</a>
+                <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                  <dd><a onclick="x_admin_show('资讯','http://www.baidu.com')"><i class="iconfont">&#xe6a2;</i>资讯</a></dd>
+                </dl>
+              </li>
+            </ul>
+            <ul class="layui-nav right" lay-filter="">
+              <li class="layui-nav-item">
+                <a href="javascript:;">{{ user }}</a>
+                <dl class="layui-nav-child">
+                  <dd><a onclick="x_admin_show('个人信息','{% url "ry_user" user.pk %}', 500, 350)">我的资料</a></dd>
+                  <dd><a href="/admin/logout/">退出</a></dd>
+                </dl>
+              </li>
+              <li class="layui-nav-item to-index"><a href="/">前台首页</a></li>
+            </ul>
+        </div>
+        <!-- 左边侧边栏 -->
+
+        <div class="left-nav">
+            <div id="side-nav">
+                <ul id="nav">
+                    {% if app_list %}
+                        {% for app in app_list %}
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="iconfont">&#xe6b8;</i>
+                                    <cite>{{ app.name }}</cite>
+                                    <i class="iconfont nav_right">&#xe697;</i>
+                                </a>
+                                <ul class="sub-menu">
+                                    {% for model in app.models %}
+                                        <li>
+                                            <a _href="{{ model.admin_url }}">
+                                                <i class="iconfont">&#xe6a7;</i>
+                                                <cite>{{ model.name }}</cite>
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        {% endfor %}
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+
+        <!--主体-->
+        <div class="page-content">
+            <div class="layui-tab tab" lay-filter="xbs_tab" lay-allowclose="false">
+              <ul class="layui-tab-title">
+                <li class="home"><i class="layui-icon">&#xe68e;</i>我的桌面</li>
+              </ul>
+              <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+
+                </div>
+              </div>
+            </div>
+        </div>
+
+{% endblock %}

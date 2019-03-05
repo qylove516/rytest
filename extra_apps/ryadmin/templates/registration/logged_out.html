@@ -1,0 +1,10 @@
+{% extends 'admin/base.html' %}
+{% load i18n %}
+{% block content %}
+    <body class="login-bg">
+    <div class="login layui-anim layui-anim-up">
+        <p>{% trans "Thanks for spending some quality time with the Web site today." %}</p>
+        <h3><a href="{% url 'admin:index' %}">{% trans 'Log in again' %}</a></h3>
+    </div>
+    </body>
+{% endblock %}
