@@ -1,8 +1,9 @@
 {% extends 'admin/base_site.html' %}
-{% load i18n admin_urls static admin_list %}
-
+{% load i18n admin_urls static admin_modify %}
+<!--添加数据 入口-->
 {% block container %}
-    <div class="x-nav">
+    <!--添加layui样式-->
+    <div class="x-body layui-anim layui-anim-up" id="content-main">
         <form {% if has_file_field %}enctype="multipart/form-data" {% endif %}action="{{ form_url }}" method="post"
               id="{{ opts.model_name }}_form" novalidate>{% csrf_token %}{% block form_top %}{% endblock %}
             <div>

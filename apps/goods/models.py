@@ -2,9 +2,11 @@ from django.db import models
 
 
 # Create your models here.
+from django.utils.html import format_html
+
 
 class Goods(models.Model):
-    name = models.CharField('名称', max_length=64, blank=True, null=True)
+    name = models.CharField('名称', max_length=64, blank=True, null=True, help_text='名称，描述商品的类型')
     desc = models.TextField('描述', blank=True, null=True)
     date = models.DateField('日期', auto_now_add=True)
     shop = models.ManyToManyField(
@@ -20,6 +22,12 @@ class Goods(models.Model):
         verbose_name='价格',
         related_name='goods_price_item'
     )
+
+    def colored_desc(self):
+        return format_html(
+            '<span style="color: blue;">{}</span>',
+            self.date
+        )
 
     def __str__(self):
         return self.name

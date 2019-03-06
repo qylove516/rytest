@@ -1,0 +1,79 @@
+{
+	'has_add_permission': True,
+	'title': '选择 商品 来修改',
+	'site_header': 'Django 管理',
+	'to_field': None,
+	'actions_on_top': True,
+	'preserved_filters': '',
+	'has_permission': True,
+	'opts': < Options
+	for Goods > ,
+	'selection_note_all': '选中了 5 个',
+	'module_name': '商品',
+	'cl': < django.contrib.admin.views.main.ChangeList object at 0x0000017F151ADF60 > ,
+	'site_title': 'Django 站点管理员',
+	'site_url': '/',
+	'available_apps': [{
+		'models': [{
+			'view_only': False,
+			'object_name': 'Goods',
+			'perms': {
+				'delete': True,
+				'change': True,
+				'view': True,
+				'add': True
+			},
+			'admin_url': '/admin/goods/goods/',
+			'add_url': '/admin/goods/goods/add/',
+			'name': '商品'
+		}],
+		'has_module_perms': True,
+		'app_url': '/admin/goods/',
+		'app_label': 'goods',
+		'name': '商品'
+	}, {
+		'models': [{
+			'view_only': False,
+			'object_name': 'UserProfile',
+			'perms': {
+				'delete': True,
+				'change': True,
+				'view': True,
+				'add': True
+			},
+			'admin_url': '/admin/users/userprofile/',
+			'add_url': '/admin/users/userprofile/add/',
+			'name': '用户'
+		}],
+		'has_module_perms': True,
+		'app_url': '/admin/users/',
+		'app_label': 'users',
+		'name': '用户'
+	}, {
+		'models': [{
+			'view_only': False,
+			'object_name': 'Group',
+			'perms': {
+				'delete': True,
+				'change': True,
+				'view': True,
+				'add': True
+			},
+			'admin_url': '/admin/auth/group/',
+			'add_url': '/admin/auth/group/add/',
+			'name': '组'
+		}],
+		'has_module_perms': True,
+		'app_url': '/admin/auth/',
+		'app_label': 'auth',
+		'name': '认证和授权'
+	}],
+	'actions_selection_counter': True,
+	'is_popup': False,
+	'selection_note': '2 个中 0 个被选',
+	'media': Media(css = {}, js = ['admin/js/vendor/jquery/jquery.js', 'admin/js/jquery.init.js', 'admin/js/core.js', 'admin/js/admin/RelatedObjectLookups.js', 'admin/js/actions.js', 'admin/js/urlify.js', 'admin/js/prepopulate.js', 'admin/js/vendor/xregexp/xregexp.js']),
+	'actions_on_bottom': False,
+	'action_form': < ActionForm bound = False,
+	valid = Unknown,
+	fields = (action; select_across) >
+}

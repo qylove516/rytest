@@ -1,0 +1,114 @@
+{
+	'app_label': 'goods',
+	'save_as': False,
+	'change': False,
+	'has_absolute_url': False,
+	'has_file_field': False,
+	'is_popup_var': '_popup',
+	'available_apps': [{
+		'app_label': 'goods',
+		'has_module_perms': True,
+		'app_url': '/admin/goods/',
+		'name': '商品',
+		'models': [{
+			'object_name': 'Price',
+			'perms': {
+				'view': True,
+				'change': True,
+				'add': True,
+				'delete': True
+			},
+			'view_only': False,
+			'add_url': '/admin/goods/price/add/',
+			'admin_url': '/admin/goods/price/',
+			'name': '价格'
+		}, {
+			'object_name': 'Goods',
+			'perms': {
+				'view': True,
+				'change': True,
+				'add': True,
+				'delete': True
+			},
+			'view_only': False,
+			'add_url': '/admin/goods/goods/add/',
+			'admin_url': '/admin/goods/goods/',
+			'name': '商品'
+		}, {
+			'object_name': 'Shop',
+			'perms': {
+				'view': True,
+				'change': True,
+				'add': True,
+				'delete': True
+			},
+			'view_only': False,
+			'add_url': '/admin/goods/shop/add/',
+			'admin_url': '/admin/goods/shop/',
+			'name': '商家'
+		}]
+	}, {
+		'app_label': 'users',
+		'has_module_perms': True,
+		'app_url': '/admin/users/',
+		'name': '用户',
+		'models': [{
+			'object_name': 'UserProfile',
+			'perms': {
+				'view': True,
+				'change': True,
+				'add': True,
+				'delete': True
+			},
+			'view_only': False,
+			'add_url': '/admin/users/userprofile/add/',
+			'admin_url': '/admin/users/userprofile/',
+			'name': '用户'
+		}]
+	}, {
+		'app_label': 'auth',
+		'has_module_perms': True,
+		'app_url': '/admin/auth/',
+		'name': '认证和授权',
+		'models': [{
+			'object_name': 'Group',
+			'perms': {
+				'view': True,
+				'change': True,
+				'add': True,
+				'delete': True
+			},
+			'view_only': False,
+			'add_url': '/admin/auth/group/add/',
+			'admin_url': '/admin/auth/group/',
+			'name': '组'
+		}]
+	}],
+	'media': Media(css = {}, js = ['admin/js/vendor/jquery/jquery.js', 'admin/js/jquery.init.js', 'admin/js/core.js', 'admin/js/admin/RelatedObjectLookups.js', 'admin/js/actions.js', 'admin/js/urlify.js', 'admin/js/prepopulate.js', 'admin/js/vendor/xregexp/xregexp.js']),
+	'has_change_permission': True,
+	'preserved_filters': '',
+	'to_field_var': '_to_field',
+	'has_add_permission': True,
+	'has_editable_inline_admin_formsets': False,
+	'content_type_id': 15,
+	'original': None,
+	'absolute_url': None,
+	'add': True,
+	'has_delete_permission': True,
+	'title': '增加 商品',
+	'site_header': '积分平台',
+	'inline_admin_formsets': [],
+	'site_title': '瑞银',
+	'adminform': < django.contrib.admin.helpers.AdminForm object at 0x000001C8293D4C88 > ,
+	'form_url': '',
+	'errors': [],
+	'save_on_top': False,
+	'opts': < Options
+	for Goods > ,
+	'has_view_permission': True,
+	'site_url': '/',
+	'is_popup': False,
+	'to_field': None,
+	'has_permission': True,
+	'object_id': None
+}

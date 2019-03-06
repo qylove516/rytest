@@ -1,0 +1,24 @@
+{% load i18n static %}
+<!--具体数据显示-->
+{% if results %}
+    <div class="results">
+        <table id="result_list" class="layui-table">
+            <thead>
+                <tr>
+                    {% for header in result_headers %}
+                        <th >
+                           {{ header.text|capfirst }}
+                        </th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in results %}
+                    <tr>
+                        {% for item in result %}{{ item }}{% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endif %}

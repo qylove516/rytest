@@ -1,0 +1,36 @@
+{
+	'cl': < django.contrib.admin.views.main.ChangeList object at 0x000001E08C0A7D30 > ,
+	'num_sorted_fields': 0,
+	'results': [
+		['<td class="action-checkbox"><input type="checkbox" name="_selected_action" value="4" class="action-select"></td>', '<th class="field-name"><a href="/admin/goods/price/4/change/">444</a></th>', '<td class="field-num">4444</td>'],
+		['<td class="action-checkbox"><input type="checkbox" name="_selected_action" value="3" class="action-select"></td>', '<th class="field-name"><a href="/admin/goods/price/3/change/">3333</a></th>', '<td class="field-num">3333</td>'],
+		['<td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2" class="action-select"></td>', '<th class="field-name"><a href="/admin/goods/price/2/change/">222</a></th>', '<td class="field-num">222</td>'],
+		['<td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1" class="action-select"></td>', '<th class="field-name"><a href="/admin/goods/price/1/change/">123</a></th>', '<td class="field-num">111</td>']
+	],
+	'result_hidden_fields': [],
+	'result_headers': [{
+		'text': '<input type="checkbox" id="action-toggle">',
+		'class_attrib': ' class="action-checkbox-column"',
+		'sortable': False
+	}, {
+		'class_attrib': ' class="sortable column-name"',
+		'sortable': True,
+		'url_toggle': '?o=',
+		'sort_priority': 0,
+		'url_primary': '?o=1',
+		'text': '名称',
+		'ascending': False,
+		'sorted': False,
+		'url_remove': '?o='
+	}, {
+		'class_attrib': ' class="sortable column-num"',
+		'sortable': True,
+		'url_toggle': '?o=',
+		'sort_priority': 0,
+		'url_primary': '?o=2',
+		'text': '价格',
+		'ascending': False,
+		'sorted': False,
+		'url_remove': '?o='
+	}]
+}
